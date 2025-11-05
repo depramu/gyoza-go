@@ -353,3 +353,15 @@ section {
     padding: 3rem 0;
   }
 }
+
+.whatsapp-link {
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+  color: #1ebe5d;
+}
+ 
