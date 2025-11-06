@@ -1,0 +1,231 @@
+.order-page {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.order-page .page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.order-page .page-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.order-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Kolom Menu */
+.menu-list h2 {
+    font-size: 1.8rem;
+    color: #e85a4f; /* Warna highlight */
+    border-bottom: 2px solid #e85a4f;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.menu-list h2:first-child {
+    margin-top: 0;
+}
+
+
+.menu-item-order {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-icon {
+    font-size: 2.5rem;
+}
+
+.item-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item-subtitle {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.porsi-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.porsi-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.95rem;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control button {
+    background-color: #e85a4f;
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.quantity-control button:hover {
+    background-color: #d14a3f;
+}
+
+.quantity-control span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Kolom Ringkasan Pesanan */
+.order-summary-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    position: sticky; /* Membuat ringkasan tetap terlihat saat scroll */
+    top: 20px;
+}
+
+.order-summary-card h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: #888;
+    padding: 20px 0;
+}
+
+.summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item span {
+    color: #555;
+}
+
+.summary-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-total h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.summary-total p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e85a4f;
+}
+
+.whatsapp-order-button {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    display: block;
+}
+
+.whatsapp-order-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-summary-card {
+        position: static;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-item-order {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .porsi-options {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .porsi-item {
+        width: 100%;
+    }
+}

@@ -12,7 +12,10 @@ function Footer() {
                     <a className="whatsapp-link" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer">WhatsApp</a>
                     <a href="/menu">Menu</a>
                     <a href="#tentang">Tentang</a>
-                    <a href="#kontak">Kontak</a>
+                    <a href="https://wa.me/6285959114553" target="_blank" rel="noopener noreferrer">
+                    Kontak
+                    </a>
+                
                 </div>
                 <div className="footer-copy">© {new Date().getFullYear()} Gyoza Go</div>
             </div>

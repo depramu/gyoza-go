@@ -18,7 +18,7 @@ function Home() {
                             Pesan sekarang dan nikmati gyoza segar.
                         </p>
                         <div className="hero-buttons">
-                            <Button className="whatsapp-link" variant="primary" to="https://wa.me/6281234567890" target="_blank" rel="noreferrer">Pesan Sekarang</Button>
+                        <Button variant="primary" to="/pesan">Pesan Sekarang</Button>
                             <Button variant="secondary" to="/menu">Lihat Menu</Button>
                         </div>
                     </div>
@@ -102,17 +102,23 @@ function Home() {
                         <div className="contact-item">
                             <div className="contact-icon">📍</div>
                             <h3>Alamat</h3>
-                            <p>Jl. Contoh No. 123<br />Jakarta Selatan</p>
+                            <p> <a href="https://www.google.com/maps/search/?api=1&query=-6.12603,106.90382" target="_blank" rel="noopener noreferrer">
+                                Gg. Masjid Al-Kuramaa No.23
+                            </a>
+                        </p>
                         </div>
                         <div className="contact-item">
                             <div className="contact-icon">📞</div>
                             <h3>Telepon</h3>
-                            <p>+62 812-3456-7890</p>
+                            <p><a href="https://wa.me/6285779006690" target="_blank" rel="noopener noreferrer">
+                        +62 857-7900-6690
+                        </a>
+                            </p>
                         </div>
                         <div className="contact-item">
                             <div className="contact-icon">✉️</div>
                             <h3>Email</h3>
-                            <p>info@gyozago.com</p>
+                            <p><a href="mailto:zahrahimeldaasari@gmail.com" target = "_blank" rel="noopener noreferrer">info@gyozago.com</a></p>
                         </div>
                         <div className="contact-item">
                             <div className="contact-icon">🕐</div>
