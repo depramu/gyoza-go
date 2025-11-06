@@ -116,12 +116,16 @@ function App() {
             <div className="contact-item">
               <div className="contact-icon">📞</div>
               <h3>Telepon</h3>
-              <p>+62 812-3456-7890</p>
+              <p><a href="https://wa.me/6285959114553" target="_blank" rel="noopener noreferrer">
+              +62 859-5911-4553
+            </a>
+                </p>
             </div>
             <div className="contact-item">
               <div className="contact-icon">✉️</div>
               <h3>Email</h3>
-              <p>info@gyozago.com</p>
+              <p>
+                <a href="mailto:zahrahimeldaasari@gmail.com" target = "_blank" rel="noopener noreferrer">info@gyozago.com</a></p>
             </div>
             <div className="contact-item">
               <div className="contact-icon">🕐</div>
