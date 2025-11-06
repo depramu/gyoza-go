@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './OrderPage.css'; // Kita akan buat file CSS ini nanti
-import Button from '../components/Button'; // Menggunakan kembali komponen Button
+import './OrderPage.css';
+import Button from '../components/Button';
 
-// Data menu dan add-on bisa diletakkan di sini atau diimpor dari file lain
 const menuItems = [
     { icon: '🥟', title: 'Gyoza Original', subtitle: 'Gyoza + Chili Oil', price5: '16K', price7: '22K' },
     { icon: '🧀', title: 'Gyoza Mentai', subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil', price5: '18K', price7: '25K' },
@@ -17,33 +16,43 @@ const addons = [
     { name: 'Keju Slice', price: '2K' }
 ];
 
-// Helper function untuk mengubah harga string (e.g., "16K") menjadi angka
 const parsePrice = (priceStr) => Number(priceStr.replace('K', '')) * 1000;
 
 function OrderPage() {
-    // State untuk menyimpan item di keranjang
-    // Strukturnya: { 'Gyoza Original-5': { quantity: 2, price: 16000, title: 'Gyoza Original (Isi 5)' }, ... }
     const [cart, setCart] = useState({});
 
-    // Fungsi untuk menambah item ke keranjang
+    // --- FUNGSI DIPERBAIKI ---
     const handleAddToCart = (item, size) => {
-        const key = `${item.title}-${size}`;
-        const price = size === 5 ? item.price5 : item.price7;
-        const numericPrice = parsePrice(price);
+        let key, priceStr, cartTitle;
+
+        if (size === 'addon') {
+            // Logika untuk Add-ons
+            key = `${item.name}-${size}`;
+            priceStr = item.price;
+            cartTitle = item.name;
+        } else {
+            // Logika untuk Menu Gyoza
+            key = `${item.title}-${size}`;
+            priceStr = size === 5 ? item.price5 : item.price7;
+            cartTitle = `${item.title} (Isi ${size})`;
+        }
+
+        const numericPrice = parsePrice(priceStr);
         
         setCart(prevCart => {
             const existingItem = prevCart[key];
             if (existingItem) {
                 return { ...prevCart, [key]: { ...existingItem, quantity: existingItem.quantity + 1 } };
             } else {
-                return { ...prevCart, [key]: { title: `${item.title} (Isi ${size})`, price: numericPrice, quantity: 1 } };
+                return { ...prevCart, [key]: { title: cartTitle, price: numericPrice, quantity: 1 } };
             }
         });
     };
     
-    // Fungsi untuk mengurangi item dari keranjang
+    // --- FUNGSI DIPERBAIKI ---
     const handleRemoveFromCart = (item, size) => {
-        const key = `${item.title}-${size}`;
+        // Gunakan `item.name` untuk addon, dan `item.title` untuk menu
+        const key = size === 'addon' ? `${item.name}-${size}` : `${item.title}-${size}`;
         
         setCart(prevCart => {
             const existingItem = prevCart[key];
@@ -59,14 +68,12 @@ function OrderPage() {
         });
     };
 
-    // Menghitung total harga dari semua item di keranjang
     const calculateTotal = () => {
         return Object.values(cart).reduce((total, item) => total + (item.price * item.quantity), 0);
     };
 
     const total = calculateTotal();
 
-    // Membuat pesan untuk WhatsApp
     const generateWhatsAppMessage = () => {
         let message = "Halo Gyoza Go, saya mau pesan:\n\n";
         
@@ -80,10 +87,10 @@ function OrderPage() {
         return encodeURIComponent(message);
     };
 
-    const WHATSAPP_NUMBER = "6281234567890"; // Ganti dengan nomor WhatsApp tujuan
-    const whatsappLink = `https://wa.me/${6285779006690}?text=${generateWhatsAppMessage()}`;
+    const WHATSAPP_NUMBER = "6285779006690"; // Ganti dengan nomor WhatsApp tujuan Anda
+    const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${generateWhatsAppMessage()}`;
 
-
+    // ... (sisa kode JSX tidak perlu diubah, jadi saya singkat di sini)
     return (
         <div className="order-page">
             <div className="container">
@@ -104,7 +111,6 @@ function OrderPage() {
                                     </div>
                                 </div>
                                 <div className="porsi-options">
-                                    {/* Opsi Isi 5 */}
                                     <div className="porsi-item">
                                         <span>Isi 5 - <b>{item.price5}</b></span>
                                         <div className="quantity-control">
@@ -113,7 +119,6 @@ function OrderPage() {
                                             <button onClick={() => handleAddToCart(item, 5)}>+</button>
                                         </div>
                                     </div>
-                                    {/* Opsi Isi 7 */}
                                     <div className="porsi-item">
                                         <span>Isi 7 - <b>{item.price7}</b></span>
                                         <div className="quantity-control">
@@ -173,13 +178,13 @@ function OrderPage() {
                             disabled={total === 0}
                             className={`whatsapp-order-button ${total === 0 ? 'disabled' : ''}`}
                         >
-                            Pesan Sekarang
+                            Pesan via WhatsApp
                         </Button>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default OrderPage;
