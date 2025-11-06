@@ -10,14 +10,15 @@ function Home() {
                 <div className="container">
                     <div className="hero-content">
                         <h1 className="hero-title">
-                            Gyoza Lezat <span className="highlight">Autentik</span>
+                            Gyoza <span className="highlight">Go</span>
                         </h1>
                         <p className="hero-subtitle">
-                            Nikmati kelezatan gyoza tradisional dengan cita rasa yang menggugah selera.
-                            Dibuat dengan resep turun temurun dan bahan berkualitas terbaik.
+                            Nikmati gyoza lezat dengan cita rasa yang menggugah selera.
+                            <br />
+                            Pesan sekarang dan nikmati gyoza segar.
                         </p>
                         <div className="hero-buttons">
-                            <Button variant="primary">Pesan Sekarang</Button>
+                            <Button className="whatsapp-link" variant="primary" to="https://wa.me/6281234567890" target="_blank" rel="noreferrer">Pesan Sekarang</Button>
                             <Button variant="secondary" to="/menu">Lihat Menu</Button>
                         </div>
                     </div>
@@ -121,13 +122,6 @@ function Home() {
                     </div>
                 </div>
             </section>
-
-            {/* Footer */}
-            <footer className="footer">
-                <div className="container">
-                    <p>&copy; 2024 Gyoza Go. Semua hak dilindungi.</p>
-                </div>
-            </footer>
         </div>
     )
 }

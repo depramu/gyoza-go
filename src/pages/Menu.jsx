@@ -6,59 +6,58 @@ function Menu() {
         {
             icon: '🥟',
             title: 'Gyoza Original',
-            description: 'Gyoza klasik dengan isian daging ayam dan sayuran segar',
-            price: 'Rp 25.000'
+            subtitle: 'Gyoza + Chili Oil',
+            price5: '16K',
+            price7: '22K'
         },
         {
-            icon: '🍤',
-            title: 'Gyoza Udang',
-            description: 'Gyoza premium dengan isian udang pilihan yang lezat',
-            price: 'Rp 35.000'
+            icon: '🧀',
+            title: 'Gyoza Mentai',
+            subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil',
+            price5: '18K',
+            price7: '25K'
         },
         {
-            icon: '🥬',
-            title: 'Gyoza Sayuran',
-            description: 'Gyoza vegetarian dengan isian sayuran segar dan sehat',
-            price: 'Rp 20.000'
+            icon: '🍳',
+            title: 'Gyoza Goreng',
+            subtitle: 'Gyoza + Chili Oil',
+            price5: '16K',
+            price7: '22K'
         },
         {
             icon: '🔥',
-            title: 'Gyoza Pedas',
-            description: 'Gyoza dengan sensasi pedas yang menggugah selera',
-            price: 'Rp 28.000'
-        },
-        {
-            icon: '🍖',
-            title: 'Gyoza Daging Sapi',
-            description: 'Gyoza dengan isian daging sapi premium yang juicy',
-            price: 'Rp 30.000'
-        },
-        {
-            icon: '🦀',
-            title: 'Gyoza Kepiting',
-            description: 'Gyoza eksklusif dengan isian daging kepiting segar',
-            price: 'Rp 40.000'
-        },
-        {
-            icon: '🧄',
-            title: 'Gyoza Bawang Putih',
-            description: 'Gyoza dengan aroma bawang putih yang menggugah selera',
-            price: 'Rp 26.000'
+            title: 'Gyoza Goreng Mentai',
+            subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil',
+            price5: '18K',
+            price7: '25K'
         },
         {
             icon: '🌶️',
-            title: 'Gyoza Super Pedas',
-            description: 'Gyoza dengan level pedas ekstrem untuk pecinta pedas',
-            price: 'Rp 32.000'
+            title: 'Gyoza Jebew',
+            subtitle: 'Gyoza + Chili Oil + Level (1,2,3)',
+            price5: '18K',
+            price7: '25K'
+        },
+        {
+            icon: '🍲',
+            title: 'Gyoza Kuah Keju',
+            subtitle: 'Gyoza + Kuah Keju + Chili Oil',
+            price5: '25K',
+            price7: '28K'
         }
+    ]
+
+    const addons = [
+        { name: 'Chili Oil', price: '3K' },
+        { name: 'Keju Slice', price: '2K' }
     ]
 
     return (
         <div className="menu-page">
             <div className="menu-header">
                 <div className="container">
-                    <h1 className="page-title">Menu Lengkap</h1>
-                    <p className="page-subtitle">Pilih gyoza favorit Anda</p>
+                    <h1 className="page-title">Food Menu</h1>
+                    <p className="page-subtitle">Pilih porsi favorit Anda: ISI 5 atau ISI 7</p>
                 </div>
             </div>
 
@@ -70,9 +69,24 @@ function Menu() {
                                 key={index}
                                 icon={item.icon}
                                 title={item.title}
-                                description={item.description}
-                                price={item.price}
+                                subtitle={item.subtitle}
+                                price5={item.price5}
+                                price7={item.price7}
                             />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="menu-section">
+                <div className="container">
+                    <h2 className="section-title">+ Add On</h2>
+                    <div className="addons-list">
+                        {addons.map((a, i) => (
+                            <div className="addon-item" key={i}>
+                                <span className="addon-name">{a.name}</span>
+                                <span className="addon-price">{a.price}</span>
+                            </div>
                         ))}
                     </div>
                 </div>

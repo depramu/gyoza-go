@@ -9,27 +9,32 @@
     text-decoration: none;
     display: inline-block;
     text-align: center;
+    outline-offset: 2px;
 }
 
 .btn-primary {
-    background: #dc2626;
+    background: var(--color-primary);
     color: white;
 }
 
 .btn-primary:hover {
-    background: #b91c1c;
+    background: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
     background: white;
-    color: #dc2626;
-    border: 2px solid #dc2626;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
-    background: #dc2626;
+    background: var(--color-primary);
     color: white;
     transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(220, 38, 38, 0.6);
 }

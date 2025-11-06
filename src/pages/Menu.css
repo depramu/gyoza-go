@@ -25,6 +25,35 @@
     padding: 4rem 0;
 }
 
+.menu-grid .menu-item .price-value.highlight {
+    color: var(--color-primary);
+}
+
+/* Addons */
+.addons-list {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem 1rem;
+}
+
+.addon-item {
+    display: contents;
+    /* keep grid lines */
+}
+
+.addon-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.addon-price {
+    font-weight: 800;
+    color: #dc2626;
+    text-align: right;
+}
+
 @media (max-width: 768px) {
     .page-title {
         font-size: 2rem;
