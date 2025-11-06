@@ -111,7 +111,17 @@ function App() {
             <div className="contact-item">
               <div className="contact-icon">📍</div>
               <h3>Alamat</h3>
-              <p>Jl. Contoh No. 123<br />Jakarta Selatan</p>
+            <a 
+              href="https://www.google.com/maps?q=-6.2925,106.8000" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <p>
+                Jl. Contoh No. 123<br />
+                Jakarta Selatan
+              </p>
+            </a>
             </div>
             <div className="contact-item">
               <div className="contact-icon">📞</div>

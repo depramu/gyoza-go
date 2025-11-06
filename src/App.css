@@ -15,6 +15,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+<<<<<<< HEAD
+}
+=======
 }
 
 /* Header */
@@ -353,3 +356,16 @@ section {
     padding: 3rem 0;
   }
 }
+
+.whatsapp-link {
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+  color: #1ebe5d;
+}
+ 
+>>>>>>> f9f71f2367c0306b1ac52062d5eb81ac784307fc
