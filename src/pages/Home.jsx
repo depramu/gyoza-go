@@ -1,6 +1,11 @@
 import MenuItem from "../components/MenuItem";
 import Button from "../components/Button";
 import "./Home.css";
+import mentai from '../assets/mentai.jpg'
+import goreng from '../assets/goreng.jpg'
+import jebew from '../assets/jebew.jpg'
+import kuahkeju from '../assets/kuahKeju.jpg'
+import gorengmentai from '../assets/gorengMentai.jpg'
 
 function Home() {
   return (
@@ -36,22 +41,22 @@ function Home() {
           <p className="section-subtitle">Pilihan gyoza terbaik untuk Anda</p>
           <div className="menu-grid-home">
             <MenuItem
-              icon="🥟"
+              icon={goreng}
               title="Gyoza Original"
               description="Gyoza klasik isi ayam dan sentuhan chili oil yang menambah citarasa."
             />
             <MenuItem
-              icon="🍤"
+              icon={mentai}
               title="Gyoza Mentai"
               description="Gyoza isi ayam dengan saus mentai panggang yang creamy dan menggoda selera."
             />
             <MenuItem
-              icon="🥬"
+              icon={gorengmentai}
               title="Gyoza Goreng Mentai"
               description="Gyoza goreng isi ayam kombinasi kerenyahan dan rasa creamy yang bikin nagih."
             />
             <MenuItem
-              icon="🔥"
+              icon={kuahkeju}
               title="Gyoza Kuah Keju"
               description="Gyoza isi ayam berpadu dengan kuah keju gurih yang meleleh di setiap suapan."
             />
