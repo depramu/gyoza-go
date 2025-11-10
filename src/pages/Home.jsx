@@ -6,6 +6,7 @@ import goreng from '../assets/goreng.jpg'
 import jebew from '../assets/jebew.jpg'
 import kuahkeju from '../assets/kuahKeju.jpg'
 import gorengmentai from '../assets/gorengMentai.jpg'
+import original from '../assets/original.jpg'
 
 function Home() {
   return (
@@ -41,7 +42,7 @@ function Home() {
           <p className="section-subtitle">Pilihan gyoza terbaik untuk Anda</p>
           <div className="menu-grid-home">
             <MenuItem
-              icon={goreng}
+              icon={original}
               title="Gyoza Original"
               description="Gyoza klasik isi ayam dan sentuhan chili oil yang menambah citarasa."
             />

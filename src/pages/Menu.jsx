@@ -5,12 +5,13 @@ import goreng from '../assets/goreng.jpg'
 import jebew from '../assets/jebew.jpg'
 import kuahkeju from '../assets/kuahKeju.jpg'
 import gorengmentai from '../assets/gorengMentai.jpg'
+import original from '../assets/original.jpg'
 
 
 function Menu() {
     const menuItems = [
         {
-            icon: goreng,
+            icon: original,
             title: 'Gyoza Original',
             subtitle: 'Gyoza + Chili Oil',
             price5: '16K',
