@@ -86,7 +86,7 @@
   .hamburger {
     display: flex;
   }
-
+  
   .nav-toggle:checked ~ .nav {
     display: flex;
   }

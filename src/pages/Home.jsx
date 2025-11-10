@@ -142,19 +142,6 @@ function Home() {
               </p>
             </div>
             <div className="contact-item">
-              <div className="contact-icon">✉️</div>
-              <h3>Email</h3>
-              <p>
-                <a
-                  href="mailto:zahrahimeldaasari@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  info@gyozago.com
-                </a>
-              </p>
-            </div>
-            <div className="contact-item">
               <div className="contact-icon">🕐</div>
               <h3>Jam Buka</h3>
               <p>
