@@ -1,45 +1,51 @@
 import MenuItem from '../components/MenuItem'
 import './Menu.css'
+import mentai from '../assets/mentai.jpg'
+import goreng from '../assets/goreng.jpg'
+import jebew from '../assets/jebew.jpg'
+import kuahkeju from '../assets/kuahKeju.jpg'
+import gorengmentai from '../assets/gorengMentai.jpg'
+
 
 function Menu() {
     const menuItems = [
         {
-            icon: '🥟',
+            icon: goreng,
             title: 'Gyoza Original',
             subtitle: 'Gyoza + Chili Oil',
             price5: '16K',
             price7: '22K'
         },
         {
-            icon: '🧀',
+            icon: mentai,
             title: 'Gyoza Mentai',
             subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil',
             price5: '18K',
             price7: '25K'
         },
         {
-            icon: '🍳',
+            icon: goreng,
             title: 'Gyoza Goreng',
             subtitle: 'Gyoza + Chili Oil',
             price5: '16K',
             price7: '22K'
         },
         {
-            icon: '🔥',
+            icon: gorengmentai,
             title: 'Gyoza Goreng Mentai',
             subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil',
             price5: '18K',
             price7: '25K'
         },
         {
-            icon: '🌶️',
+            icon: jebew,
             title: 'Gyoza Jebew',
             subtitle: 'Gyoza + Chili Oil + Level (1,2,3)',
             price5: '18K',
             price7: '25K'
         },
         {
-            icon: '🍲',
+            icon: kuahkeju,
             title: 'Gyoza Kuah Keju',
             subtitle: 'Gyoza + Kuah Keju + Chili Oil',
             price5: '25K',

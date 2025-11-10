@@ -3,9 +3,20 @@ import './MenuItem.css'
 function MenuItem({ icon, title, description, price, price5, price7, subtitle }) {
     const hasDualPrices = price5 || price7
 
+      const isImage = typeof icon === 'string' && (icon.includes('/') || icon.includes('.'));
+
     return (
-        <div className="menu-item">
-            {icon ? <div className="menu-icon">{icon}</div> : null}
+       <div className="menu-item">
+            {/* Bagian Icon/Gambar */}
+            {icon ? (
+                <div className="menu-icon">
+                    {isImage ? (
+                        <img src={icon} alt={title} />
+                    ) : (
+                        <span>{icon}</span>
+                    )}
+                </div>
+            ) : null}
             <h3>{title}</h3>
             {subtitle ? <div className="menu-subtitle">{subtitle}</div> : null}
             {description ? <p>{description}</p> : null}

@@ -1,10 +1,15 @@
+/* MenuItem.css (Versi Gabungan & Perbaikan) */
+
 .menu-item {
     background: #fff;
     border: 2px solid #f3f4f6;
     border-radius: 12px;
-    padding: 2rem;
     text-align: center;
     transition: all 0.3s;
+    display: flex; /* --- BARIS BARU --- */
+    flex-direction: column; /* --- BARIS BARU --- */
+    overflow: hidden; /* --- BARIS BARU: Penting agar gambar terpotong rapi sesuai border-radius --- */
+    /* padding: 2rem; <-- PADDING DIHAPUS DARI SINI */
 }
 
 .menu-item:hover {
@@ -13,10 +18,36 @@
     box-shadow: 0 10px 25px rgba(220, 38, 38, 0.15);
 }
 
+/* === BAGIAN UTAMA UNTUK GAMBAR === */
 .menu-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    width: 100%;
+    height: 180px; /* Atur tinggi frame gambar sesuai selera */
+    background-color: #f3f4f6; /* Warna latar belakang placeholder */
+    margin-bottom: 0; /* Margin tidak diperlukan lagi di sini */
+    
+    /* Untuk tetap bisa menampilkan emoji di tengah jika digunakan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem; /* Ukuran jika yang ditampilkan adalah emoji */
 }
+
+.menu-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ini kuncinya! Membuat gambar pas tanpa gepeng */
+}
+/* === AKHIR BAGIAN GAMBAR === */
+
+
+/* --- KELAS BARU UNTUK MEMBUNGKUS KONTEN --- */
+.menu-item-content {
+    padding: 1.5rem 2rem 2rem 2rem; /* Padding yang sebelumnya di .menu-item dipindah ke sini */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Membuat konten ini mengisi sisa ruang */
+}
+
 
 .menu-item h3 {
     font-size: 1.5rem;
@@ -28,12 +59,7 @@
     font-size: 0.95rem;
     color: #6b7280;
     margin-bottom: 0.75rem;
-}
-
-.menu-item p {
-    color: #6b7280;
-    margin-bottom: 1rem;
-    line-height: 1.6;
+    flex-grow: 1; /* Mendorong harga ke bawah agar sejajar */
 }
 
 .menu-price {
@@ -47,8 +73,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-top: 1rem;
-    align-items: end;
+    margin-top: 1.5rem; /* Beri sedikit jarak tambahan */
 }
 
 .price-col {
