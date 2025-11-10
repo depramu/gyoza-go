@@ -10,7 +10,7 @@ import gorengmentai from '../assets/gorengMentai.jpg'
 function Menu() {
     const menuItems = [
         {
-            icon: goreng,
+            icon: original,
             title: 'Gyoza Original',
             subtitle: 'Gyoza + Chili Oil',
             price5: '16K',
@@ -62,8 +62,8 @@ function Menu() {
         <div className="menu-page">
             <div className="menu-header">
                 <div className="container">
-                    <h1 className="page-title">Food Menu</h1>
-                    <p className="page-subtitle">Pilih porsi favorit Anda: ISI 5 atau ISI 7</p>
+                    <h1 className="page-title">Menu</h1>
+                    <p className="page-subtitle">Pilih porsi favorit Anda: Isi 5 atau isi 7</p>
                 </div>
             </div>
 
@@ -102,4 +102,3 @@ function Menu() {
 }
 
 export default Menu
-

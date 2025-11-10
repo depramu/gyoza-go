@@ -25,6 +25,13 @@
     padding: 4rem 0;
 }
 
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
 .menu-grid .menu-item .price-value.highlight {
     color: var(--color-primary);
 }

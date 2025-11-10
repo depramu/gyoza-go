@@ -3,12 +3,12 @@ import './OrderPage.css';
 import Button from '../components/Button';
 
 const menuItems = [
-    { icon: '🥟', title: 'Gyoza Original', subtitle: 'Gyoza + Chili Oil', price5: '16K', price7: '22K' },
-    { icon: '🧀', title: 'Gyoza Mentai', subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil', price5: '18K', price7: '25K' },
-    { icon: '🍳', title: 'Gyoza Goreng', subtitle: 'Gyoza + Chili Oil', price5: '16K', price7: '22K' },
-    { icon: '🔥', title: 'Gyoza Goreng Mentai', subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil', price5: '18K', price7: '25K' },
-    { icon: '🌶️', title: 'Gyoza Jebew', subtitle: 'Gyoza + Chili Oil + Level (1,2,3)', price5: '18K', price7: '25K' },
-    { icon: '🍲', title: 'Gyoza Kuah Keju', subtitle: 'Gyoza + Kuah Keju + Chili Oil', price5: '25K', price7: '28K' }
+    {title: 'Gyoza Original', subtitle: 'Gyoza + Chili Oil', price5: '16K', price7: '22K' },
+    {title: 'Gyoza Mentai', subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil', price5: '18K', price7: '25K' },
+    {title: 'Gyoza Goreng', subtitle: 'Gyoza + Chili Oil', price5: '16K', price7: '22K' },
+    {title: 'Gyoza Goreng Mentai', subtitle: 'Gyoza + Saos Mentai + Keju + Chili Oil', price5: '18K', price7: '25K' },
+    {title: 'Gyoza Jebew', subtitle: 'Gyoza + Chili Oil + Level (1,2,3)', price5: '18K', price7: '25K' },
+    {title: 'Gyoza Kuah Keju', subtitle: 'Gyoza + Kuah Keju + Chili Oil', price5: '25K', price7: '28K' }
 ];
 
 const addons = [
