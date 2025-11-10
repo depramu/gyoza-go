@@ -2,7 +2,7 @@
   "name": "gyoza-go",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://depramu.github.io/gyoza-go",
+  "homepage": "https://depramu.github.io/gyoza-go/",
   "type": "module",
   "scripts": {
     "dev": "vite",
