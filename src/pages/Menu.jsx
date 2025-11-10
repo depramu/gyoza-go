@@ -10,7 +10,7 @@ import gorengmentai from '../assets/gorengMentai.jpg'
 function Menu() {
     const menuItems = [
         {
-            icon: original,
+            icon: goreng,
             title: 'Gyoza Original',
             subtitle: 'Gyoza + Chili Oil',
             price5: '16K',
